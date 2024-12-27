@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pixel Art Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pixel Art Creator</h1>
+        <div class="controls">
+            <button class="clear-btn" onclick="clearGrid()">Clear</button>
+            <button class="download-btn" onclick="downloadImage()">Download Art</button>
+        </div>
+        <div class="color-picker">
+            <div class="color-box" style="background-color: black;" onclick="changeColor('black')"></div>
+            <div class="color-box" style="background-color: red;" onclick="changeColor('red')"></div>
+            <div class="color-box" style="background-color: green;" onclick="changeColor('green')"></div>
+            <div class="color-box" style="background-color: blue;" onclick="changeColor('blue')"></div>
+            <div class="color-box" style="background-color: yellow;" onclick="changeColor('yellow')"></div>
+            <input type="color" onchange="changeColor(this.value)" />
+        </div>
+        <div class="grid-container" id="gridContainer">
+            <div class="grid" id="pixelGrid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

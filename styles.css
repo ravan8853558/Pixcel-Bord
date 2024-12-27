@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(145deg, #6e7c7c, #5e6b6b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #212121;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.clear-btn, .download-btn {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.clear-btn:hover, .download-btn:hover {
+    transform: scale(1.1);
+}
+.download-btn {
+    background-color: #4caf50;
+}
+.color-picker {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+.color-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.color-box:hover {
+    transform: scale(1.2);
+}
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 150px);
+    overflow: auto;
+    position: relative;
+    background-color: #2c2c2c;
+    border: 2px solid #fff;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(120, 40px);
+    grid-template-rows: repeat(120, 40px);
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    transform-origin: center;
+    transition: transform 0.1s ease-in-out;
+}
+.pixel {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.pixel:hover {
+    cursor: pointer;
+}
